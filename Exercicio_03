@@ -1,0 +1,51 @@
+import numpy as np 
+
+def exercicio_3():
+    
+    # recebe a quantidade de linhas da matriz
+    linha = int(input("Informe quantas linhas tem sua matriz: ")) 
+    # recebe a quantidade de colunas da matriz
+    coluna = int(input("Informe quantas colunas tem sua matriz: ")) 
+    
+    
+    print("\n") 
+    
+    # iniciando uma matriz de números reais com linhas e colunas definidas
+    global A
+    A = np.empty([linha,coluna], dtype = float)
+
+    # estrutura for aninhada que recebe os elementos da matriz
+    for i in range(0, linha):
+        for j in range(0, coluna):
+            A[i][j] = float(input("Insira o elemento [{}][{}] da matriz: ".format(i + 1,j + 1)))
+
+    #imprime na tela a matriz original
+    print("\n\nA matriz digitada é:\n\n{}\n\n".format(A))
+   
+    # definindo a matriz transposta com uma função do numpy
+    A_T = np.transpose(A) 
+    
+    # imprime na tela a matriz transposta
+    print("A matriz transposta é:\n\n{}\n\n". format(A_T))
+    
+    # imprime na tela a soma da matriz 
+    print ("A Soma da matriz é:", A.sum())
+    print("\n") 
+
+    # imprime na tela a soma das colunas da matriz     
+    print ("A Soma das colunas da matriz é:", A.sum(axis=0))
+    print("\n") 
+
+    # imprime na tela a soma da matriz 
+    print ("A Soma das linhas da matriz é:", A.sum(axis=1))
+    print("\n") 
+
+     # imprime na tela maior valor da matriz
+    print ("O maior valor da matriz é:", A.max())
+    print("\n") 
+    
+     # imprime na tela menor valor da matriz
+    print ("O menor valor da matriz é:", A.min())
+   
+# imprimindo a função criada
+exercicio_3()
