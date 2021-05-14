@@ -1,0 +1,25 @@
+  # recebe a quantidade de linhas da matriz
+  linha_b = int(input("Informe quantas linhas tem a matriz a ser somada com a do exercicio 3: ")) 
+
+   # recebe a quantidade de colunas da matriz
+  coluna_b = int(input("Informe quantas colunas tem a matriz a ser somada com a do exercicio 3: ")) 
+
+  print("\n") 
+
+
+
+  B = np.empty([linha_b,coluna_b], dtype = float)
+
+
+  for i in range(0, linha_b):
+      for j in range(0, coluna_b):
+          B[i][j] = float(input("Insira o elemento [{}][{}] da matriz: ".format(i + 1,j + 1)))
+
+  #imprime na tela a matriz original
+  print("\n\nA matriz digitada é:\n\n{}\n\n".format(B))
+  print("\n") 
+  print("\n\nA matriz do exercicio 3 é:\n\n{}\n\n".format(A))
+  print("\n") 
+  soma_matriz_A = A.sum()   
+  soma_matriz_B = B.sum()   
+  print("\n\nA soma das duas matrizes é: ", int(soma_matriz_A) + int(soma_matriz_B))
