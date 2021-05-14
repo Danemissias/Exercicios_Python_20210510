@@ -1,0 +1,8 @@
+import numpy as np
+def calculo_matrizes (matriz1, matriz2):
+  valor_calculo = sum(np.array(matriz1)) * sum(np.array(matriz2))
+  print (valor_calculo)
+
+#Chama função
+
+calculo_matrizes([1,2],[3,1])
